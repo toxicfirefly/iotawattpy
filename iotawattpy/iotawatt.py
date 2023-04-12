@@ -53,6 +53,7 @@ class Iotawatt:
 
             try:
                 self._macAddress = jsonResults["wifi"]["mac"].replace(":", "")
+                self._getMACFlag = True
                 LOGGER.debug("MAC: %s", self._macAddress)
             except KeyError:
                 raise
